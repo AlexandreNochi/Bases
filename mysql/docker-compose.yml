@@ -1,0 +1,19 @@
+version: '3.9'
+
+services:
+  mysql:
+    build: .
+    container_name: mysql_base
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: NumSey_123
+      MYSQL_DATABASE: freela_base
+      MYSQL_USER: alexandre
+      MYSQL_PASSWORD: NumSey_123
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+volumes:
+  mysql_data:
