@@ -1,8 +1,5 @@
-version: '3.9'
-
 services:
   postgres:
-    build: .
     image: postgres:latest
     container_name: my_postgres
     environment:

@@ -1,8 +1,6 @@
-version: '3.9'
-
 services:
   mysql:
-    build: .
+    image: mysql/mysql-server
     container_name: mysql_base
     restart: always
     environment:

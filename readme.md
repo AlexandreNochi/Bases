@@ -1,0 +1,1 @@
+Repo com bancos mais usados para facil configuração.
