@@ -1,0 +1,15 @@
+services:
+  oracle11g:
+    image: wnameless/oracle-xe-11g-r2
+    container_name: oracle11g
+    ports:
+      - "1521:1521"   # Porta do Oracle Listener
+      - "8080:8080"   # Porta do Oracle APEX (se habilitado)
+    environment:
+      - ORACLE_ALLOW_REMOTE=true
+    volumes:
+      - oracle-data:/u01/app/oracle
+    restart: unless-stopped
+
+volumes:
+  oracle-data:
